@@ -24,7 +24,7 @@ For example:
 
 ```python:
     fp_type = 'fp16'
-	fixed_bits = 16
+    fixed_bits = 16
     # error_type = 'remove_bits'
     error_type = 'stuck_bits'
     # error_type = 'flip_bits'
