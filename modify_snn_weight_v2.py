@@ -13,6 +13,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import random
 from datetime import datetime
+import time
 import pdb
 from self_models import *
 import sys
@@ -24,7 +25,7 @@ def shift_and_return(number, bit):
     return int(number * (2**(bit-1))) / (2**(bit-1))
 
 def flip_bits(number, start_bit, end_bit):
-    random.seed(datetime.now())
+    random.seed(time.time())
     # print(number)
     number = int(float(number) * (2**15))
     number = TwosComplement(number, length=16)
