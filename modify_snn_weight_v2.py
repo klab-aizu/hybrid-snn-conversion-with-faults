@@ -101,8 +101,8 @@ def insert_faults(state, key, frate, error_type, start_bit, end_bit, stuck_bit=1
                 else:
                     state['state_dict'][key][d1,d2] = remove_bits(state['state_dict'][key][d1,d2], start_bit, end_bit)
     else:
-        rand_index = np.random.randint(0, high=n_elem, size=n_index)
         while (i < n_faults):
+            rand_index = np.random.randint(0, high=n_elem, size=n_index)
             # print(rand_index)
             findexes = tuple(np.remainder(rand_index, weight_size))
             # print(findexes)
